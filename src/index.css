@@ -1,0 +1,260 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html, #root {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* ROOT WRAPPER */
+  .App {
+    display: flex;
+    height: 100%;
+    background-color: #343541;
+    color: white;
+  }
+  
+  /* SIDEBAR */
+  .sideBar {
+    width: 250px;
+    background-color: #202123;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    justify-content: space-between;
+  }
+  
+  /* Hide sidebar on mobile */
+  @media (max-width: 768px) {
+    .sideBar {
+      display: none;
+    }
+  }
+  
+  /* BRANDING */
+  .upperSideTop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .logo {
+    height: 35px;
+  }
+  .brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  /* NEW CHAT BUTTON */
+  .midBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #3e3f4b;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  .addBtn {
+    height: 18px;
+  }
+  
+  /* SUGGESTED QUESTIONS */
+  .upperSideBottom .chats-head {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .query {
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .query:hover {
+    background-color: #2a2b32;
+  }
+  
+  /* SIDEBAR BOTTOM ITEMS */
+  .lowerSide {
+    margin-top: auto;
+  }
+  .listItems {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+  }
+  .listItems:hover {
+    background-color: #2a2b32;
+  }
+  .listItemsImg {
+    width: 18px;
+  }
+  
+  /* MAIN CHAT AREA */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* CHAT MESSAGES */
+  .chats {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+  }
+  
+  /* Message Block */
+  .chat {
+    margin-bottom: 14px;
+    display: flex;
+  }
+  
+  /* Bot messages */
+  .bot {
+    justify-content: flex-start;
+  }
+  .bot .txt {
+    background: transparent;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #ffffff;
+    align-self: flex-start;
+  }
+  
+  /* User messages */
+  .chat:not(.bot) {
+    justify-content: flex-end;
+  }
+  .chat:not(.bot) .txt {
+    background-color: #2e8b57; /* sea green */
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    max-width: 85%;
+    word-wrap: break-word;
+    text-align: left;
+    align-self: flex-end;
+  }
+  
+  /* Footer copyright */
+  .coright {
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  /* Mobile Header */
+  .mobileHeader {
+    display: none;
+    text-align: left;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 16px;
+    color: white;
+    border-bottom: 1px solid #fff;
+  }
+  
+  /* Typing animation */
+  .typing-indicator {
+    font-style: italic;
+    opacity: 0.7;
+    animation: blink 1.2s infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 0.6 }
+    50% { opacity: 1 }
+  }
+  
+  /* Footer section */
+  .chatFooter {
+    padding: 12px;
+    border-top: 1px solid #4f4f4f;
+    background-color: #343541;
+  }
+  .inp {
+    background-color: #40414f;
+    padding: 8px 12px;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+  }
+  .inp input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+  }
+  .send {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 10px;
+  }
+  .send img {
+    height: 20px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .App {
+      flex-direction: column;
+    }
+  
+    .main {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .mobileHeader {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .chats {
+      padding: 12px;
+    }
+  
+    .chatFooter p {
+      font-size: 0.75rem;
+      margin-top: 8px;
+      color: #a9a9a9;
+    }
+  }
+
+  .centered-intro {
+    justify-content: center;
+    margin-top: 210px;
+    text-align: center;
+  }
+  .centered-intro .txt {
+    background: none;
+    color: #ccc;
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+  
