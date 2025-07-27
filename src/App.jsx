@@ -69,6 +69,7 @@ function App() {
       {
         text: 'I am ChatGPT, designed to help you.',
         isBot: true,
+        isIntro: true,
       },
     ]);
     setInput('');
