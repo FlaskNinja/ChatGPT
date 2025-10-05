@@ -9,7 +9,7 @@ export async function getGroqReply(userMessage) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "llama3-8b-8192", // Also valid: mixtral-8x7b-32768 or llama3-70b-8192
+      model: "openai/gpt-oss-120b", // Also valid: mixtral-8x7b-32768 or llama3-70b-8192
       messages: [
         { role: "system", content: "You are a helpful assistant." },
         { role: "user", content: userMessage },
@@ -27,3 +27,4 @@ export async function getGroqReply(userMessage) {
 
   return data.choices[0].message.content;
 }
+
